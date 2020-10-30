@@ -14,16 +14,15 @@ definition in the paper
 [On Calibration of Modern Neural Networks](https://arxiv.org/pdf/1706.04599.pdf).
 It also computes the Expected Calibration Error (ECE).
 
-To install the package and use it in your python project follow these steps:
-1. download the package from this page in a folder
-2. navigate to the folder and install with 
+### Intallation
+1. Install required packages by running
 ```console
-foo@bar:~$ pip install reid-reliability-diagrams/
+foo@bar:~$ python -m pip install -U -r <path>/requirements.txt
 ```
-3. import the package in your project with 
-```python
-import REliability_Diagram_pkg as rdp
-```
+2. Download the deplyed package as the artifact created by the last action in [Actions](https://github.com/marcoromanelli-github/MLToolsShed/actions) and unzip it.
+3. Run the command below
+```console
+foo@bar:~$ python -m pip install -U <path>/built_pkg/<filename>.whl
     
 The following code:
 ```python  
