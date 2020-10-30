@@ -1,3 +1,7 @@
+[![build_package](https://github.com/marcoromanelli-github/ReliabilityDiagrams/workflows/build_package/badge.svg)](https://github.com/marcoromanelli-github/ReliabilityDiagrams/actions)
+[![Documentation](https://img.shields.io/badge/Dcoumentation-yes-blue)](https://img.shields.io/badge/Dcoumentation-yes-blue)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 # ReliabilityDiagrams
 Create reliability diagrams to quantify ML calibration.
 
