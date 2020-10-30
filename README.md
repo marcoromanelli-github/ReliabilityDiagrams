@@ -34,5 +34,5 @@ rdp.plot_reliabiblity_diagram(y_true=y_true,
 			      rel_diag_folder=<path_to_rel_diag_folder>)
 ```
 produces the plot
-![rel_diag_img](/res_folder/REID.png)
+![rel_diag_img](/res_folder/RED.png)
    
