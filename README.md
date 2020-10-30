@@ -23,9 +23,9 @@ foo@bar:~$ python -m pip install -U -r <path>/requirements.txt
 3. Run the command below
 ```console
 foo@bar:~$ python -m pip install -U <path>/built_pkg/<filename>.whl
-    
+```  
+
 ### Current package structure
-```
 Package
 ├── LICENSE
 ├── main.py
