@@ -27,21 +27,22 @@ foo@bar:~$ python -m pip install -U <path>/built_pkg/<filename>.whl
 ### Current package structure
 ```
 Package
-├── MLToolsShed
-│   ├── simple_network_manager_pkg
-│   │   └── simple_network_manager.py
-│   └── utilities_pkg
-│       ├── gpu_setup.py
-│       ├── read_CLI_options.py
-│       ├── runtime_error_handler.py
-│       └── utilities.py
-├── MLToolsShed_test
-│   ├── __init__.py
-│   ├── test_0.py
-│   ├── test_1.py
+├── LICENSE
+├── main.py
 ├── README.md
+├── ReliabilityDiagrams
+│   ├── compute_quantities.py
+│   ├── __init__.py
+│   └── plot_reliability_diagram.py
+├── ReliabilityDiagrams_test
+│   ├── __init__.py
+│   └── test_0.py
 ├── requirements.txt
-└── setup.py
+├── setup.py
+├── test_wrapper.py
+└── toy_data
+    ├── y_pred.pkl
+    └── y_true.pkl
 ```
 
 ### How to
@@ -56,11 +57,11 @@ def run_test():
 
 if __name__ == '__main__':
     run_test()
-
 ```
+
 Supposing this command is launched from the CLI as
 ```console
-foo@bar:~$ python try_test.py -lr 0.001
+foo@bar:~$ python try_test.py
 ```
 it will produce the plot
 ![rel_diag_img](/res_folder/REID.png)
