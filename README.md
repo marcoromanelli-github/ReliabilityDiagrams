@@ -1,3 +1,7 @@
+[![build_package](https://github.com/marcoromanelli-github/ReliabilityDiagrams/workflows/build_package/badge.svg)](https://github.com/marcoromanelli-github/ReliabilityDiagrams/actions)
+[![Documentation](https://img.shields.io/badge/Dcoumentation-yes-blue)](https://img.shields.io/badge/Dcoumentation-yes-blue)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 # ReliabilityDiagrams
 Create reliability diagrams to quantify ML calibration.
 
@@ -10,29 +14,53 @@ definition in the paper
 [On Calibration of Modern Neural Networks](https://arxiv.org/pdf/1706.04599.pdf).
 It also computes the Expected Calibration Error (ECE).
 
-To install the package and use it in your python project follow these steps:
-1. download the package from this page in a folder
-2. navigate to the folder and install with 
+### Intallation
+1. Install required packages by running
 ```console
-foo@bar:~$ pip install reid-reliability-diagrams/
+foo@bar:~$ python -m pip install -U -r <path>/requirements.txt
 ```
-3. import the package in your project with 
-```python
-import REliability_Diagram_pkg as rdp
-```
-    
-The following code:
-```python  
-import pandas as pn
-import REliability_Diagram_pkg as rdp
-y_true = pn.read_pickle("<path_to_toy_data>/y_true.pkl")
-y_pred = pn.read_pickle("<path_to_toy_data>/y_pred.pkl")
+2. Download the deplyed package as the artifact created by the last action in [Actions](https://github.com/marcoromanelli-github/ReliabilityDiagrams/actions) and unzip it.
+3. Run the command below
+```console
+foo@bar:~$ python -m pip install -U <path>/built_pkg/<filename>.whl
+```  
 
-rdp.plot_reliabiblity_diagram(y_true=y_true, 
-			      y_pred=y_pred, 
-			      n_bins=10, 
-			      rel_diag_folder=<path_to_rel_diag_folder>)
+### Current package structure
+```
+Package
+├── LICENSE
+├── README.md
+├── ReliabilityDiagrams
+│   ├── compute_quantities.py
+│   └── plot_reliability_diagram.py
+├── ReliabilityDiagrams_test
+│   └── test_0.py
+├── requirements.txt
+├── setup.py
+└── toy_data
+    ├── y_pred.pkl
+    └── y_true.pkl
+```
+
+### How to
+The folder [RealiabilityDiagrams_test](https://github.com/marcoromanelli-github/ReliabilityDiagrams/tree/master/ReliabilityDiagrams_test) contains examples which are useful to understand how to use the library. Let us create a file try_test.py as below
+
+```python
+from ReliabilityDiagrams_test import test_0
+
+def run_test():
+    test_0.test_0()
+
+
+if __name__ == '__main__':
+    run_test()
+```
+
+Supposing this command is launched from the CLI as
+```console
+foo@bar:~$ python try_test.py
 ```
 produces the plot
 ![rel_diag_img](/res_folder/RED.png)
+
    
