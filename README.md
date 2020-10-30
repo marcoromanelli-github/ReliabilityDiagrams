@@ -26,20 +26,17 @@ foo@bar:~$ python -m pip install -U <path>/built_pkg/<filename>.whl
 ```  
 
 ### Current package structure
+```
 Package
 ├── LICENSE
-├── main.py
 ├── README.md
 ├── ReliabilityDiagrams
 │   ├── compute_quantities.py
-│   ├── __init__.py
 │   └── plot_reliability_diagram.py
 ├── ReliabilityDiagrams_test
-│   ├── __init__.py
 │   └── test_0.py
 ├── requirements.txt
 ├── setup.py
-├── test_wrapper.py
 └── toy_data
     ├── y_pred.pkl
     └── y_true.pkl
