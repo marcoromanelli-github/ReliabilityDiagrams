@@ -19,7 +19,7 @@ It also computes the Expected Calibration Error (ECE).
 ```console
 foo@bar:~$ python -m pip install -U -r <path>/requirements.txt
 ```
-2. Download the deplyed package as the artifact created by the last action in [Actions](https://github.com/marcoromanelli-github/ReliabilityDiagrams/actions) and unzip it.
+2. Download the deployed package as the artifact created by the last action in [Actions](https://github.com/marcoromanelli-github/ReliabilityDiagrams/actions) and unzip it.
 3. Run the command below
 ```console
 foo@bar:~$ python -m pip install -U <path>/built_pkg/<filename>.whl
